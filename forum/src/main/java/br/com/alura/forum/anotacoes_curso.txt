@@ -15,3 +15,7 @@ Autenticação Stateless: via token. Sem cache
 
 
 * Autenticação stateless: para cada requisição será feita uma validação do token passado. Sem guardar estado em cache
+
+====== security configurations =====
+A linha .antMatchers(HttpMethod.GET, "/actuator").permitAll() foi adicionada apenas para ambiente de dev. Ao subir pra produção, deverá ser removida
+uma vez que retorna dados sensíveis
