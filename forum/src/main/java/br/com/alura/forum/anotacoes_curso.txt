@@ -1,0 +1,6 @@
+PONTUAÇÕES SOBRE O DESENVOLVIMENTO:
+
+
+==== SOBRE O USO DE CACHE ====
+* Utilize-o apenas para tabelas mais estáveis que raramente sofrem alterações
+	No exemplo do curso foi utilizado na listagem dos tópicos apenas para exemplificação, mas não é uma boa prática
