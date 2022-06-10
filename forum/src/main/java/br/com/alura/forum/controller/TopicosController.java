@@ -47,7 +47,7 @@ public class TopicosController {
 
 	@GetMapping
 	@Cacheable(value = "listaDeTopicos")
-	public Page<TopicoDto> lista(@RequestParam(required = false) String nomeCurso,
+	public Page<TopicoDto> listar(@RequestParam(required = false) String nomeCurso,
 			@PageableDefault(sort = "id", direction = Direction.DESC) Pageable paginacao) {
 
 		if (nomeCurso == null) {
