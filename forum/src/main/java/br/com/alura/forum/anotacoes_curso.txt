@@ -12,3 +12,6 @@ PONTUAÇÕES SOBRE O DESENVOLVIMENTO:
 desempenho da aplicação o ideal é utilizar um token para identificar
 
 Autenticação Stateless: via token. Sem cache
+
+
+* Autenticação stateless: para cada requisição será feita uma validação do token passado. Sem guardar estado em cache

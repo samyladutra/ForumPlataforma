@@ -27,4 +27,21 @@ public class TokenService {
 				.setExpiration(dataExpiracao).signWith(SignatureAlgorithm.HS256, senha).compact();
 	}
 
+	public boolean isTokenValido(String token) {
+		try {
+			Jwts.parser().setSigningKey(this.senha).parseClaimsJws(token);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	public Long getIdUsuario(String token) {
+		try {
+			return Long.parseLong(Jwts.parser().setSigningKey(this.senha).parseClaimsJws(token).getBody().getSubject());
+		} catch (Exception e) {
+			return (long) 0;
+		}
+	}
+
 }
