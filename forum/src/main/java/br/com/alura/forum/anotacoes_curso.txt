@@ -4,3 +4,11 @@ PONTUAÇÕES SOBRE O DESENVOLVIMENTO:
 ==== SOBRE O USO DE CACHE ====
 * Utilize-o apenas para tabelas mais estáveis que raramente sofrem alterações
 	No exemplo do curso foi utilizado na listagem dos tópicos apenas para exemplificação, mas não é uma boa prática
+	
+	
+	
+=== SOBRE AUTENTICAÇÃO ====
+* a inclusão do formLogin() na classe SecurityConfigurations adiciona o formulário com os campos de email e senha, mas por questões de segurança e 
+desempenho da aplicação o ideal é utilizar um token para identificar
+
+Autenticação Stateless: via token. Sem cache
